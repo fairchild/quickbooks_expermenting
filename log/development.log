@@ -1,0 +1,325 @@
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20090110023654)
+  [4;36;1mSQL (19.6ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (10.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090110023654')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (15.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090110023654')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20090110023654)
+  [4;36;1mSQL (8.6ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "list_id" varchar(36), "time_created" datetime, "time_modified" datetime, "edit_sequence" varchar(16), "name" varchar(41), "full_name" varchar(209), "is_active" boolean, "parent_ref_list_id" varchar(36), "parent_ref_full_name" varchar(255), "sublevel" integer, "company_name" varchar(41), "salutation" varchar(15), "first_name" varchar(25), "middle_name" varchar(5), "last_name" varchar(25), "suffix" varchar(255), "bill_address_addr1" varchar(41), "bill_address_addr2" varchar(41), "bill_address_addr3" varchar(41), "bill_address_addr4" varchar(41), "bill_address_addr5" varchar(41), "bill_address_city" varchar(31), "bill_address_state" varchar(21), "bill_address_postal_code" varchar(13), "bill_address_country" varchar(31), "bill_address_note" varchar(41), "bill_address_block_addr1" varchar(41), "bill_address_block_addr2" varchar(41), "bill_address_block_addr3" varchar(41), "bill_address_block_addr4" varchar(41), "bill_address_block_addr5" varchar(41), "ship_address_addr1" varchar(41), "ship_address_addr2" varchar(41), "ship_address_addr3" varchar(41), "ship_address_addr4" varchar(41), "ship_address_addr5" varchar(41), "ship_address_city" varchar(31), "ship_address_state" varchar(21), "ship_address_postal_code" varchar(13), "ship_address_country" varchar(31), "ship_address_note" varchar(41), "ship_address_block_addr1" varchar(41), "ship_address_block_addr2" varchar(41), "ship_address_block_addr3" varchar(41), "ship_address_block_addr4" varchar(41), "ship_address_block_addr5" varchar(41), "print_as" varchar(41), "phone" varchar(21), "mobile" varchar(21), "pager" varchar(21), "alt_phone" varchar(21), "fax" varchar(21), "email" varchar(1023), "contact" varchar(41), "alt_contact" varchar(41), "customer_type_ref_list_id" varchar(36), "customer_type_ref_full_name" varchar(159), "terms_ref_list_id" varchar(36), "terms_ref_full_name" varchar(31), "sales_rep_ref_list_id" varchar(36), "sales_rep_ref_full_name" varchar(5), "balance" decimal(9,2), "total_balance" decimal(9,2), "sales_tax_code_ref_list_id" varchar(36), "sales_tax_code_ref_full_name" varchar(3), "item_sales_tax_ref_list_id" varchar(36), "item_sales_tax_ref_full_name" varchar(31), "sales_tax_country" varchar(31), "resale_number" varchar(21), "account_number" varchar(99), "credit_limit" decimal(9,2), "preferred_payment_method_ref_list_id" varchar(36), "preferred_payment_method_ref_full_name" varchar(31), "credit_card_info_credit_card_number" varchar(25), "credit_card_info_expiration_month" integer, "credit_card_info_expiration_year" integer, "credit_card_info_name_on_card" varchar(41), "credit_card_info_credit_card_address" varchar(41), "credit_card_info_credit_card_postal_code" varchar(41), "job_status" varchar(255), "job_start_date" datetime, "job_projected_end_date" datetime, "job_end_date" datetime, "job_desc" varchar(99), "job_type_ref_list_id" varchar(36), "job_type_ref_full_name" varchar(159), "notes" varchar(4095), "is_statement_with_parent" boolean, "delivery_method" varchar(255), "price_level_ref_list_id" varchar(36), "price_level_ref_full_name" varchar(31), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090110023654')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20090110030615)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "customers" already exists: CREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "list_id" varchar(36), "time_created" datetime, "time_modified" datetime, "edit_sequence" varchar(16), "name" varchar(41), "full_name" varchar(209), "is_active" boolean, "parent_ref_list_id" varchar(36), "parent_ref_full_name" varchar(255), "sublevel" integer, "company_name" varchar(41), "salutation" varchar(15), "first_name" varchar(25), "middle_name" varchar(5), "last_name" varchar(25), "suffix" varchar(255), "bill_address_addr1" varchar(41), "bill_address_addr2" varchar(41), "bill_address_addr3" varchar(41), "bill_address_addr4" varchar(41), "bill_address_addr5" varchar(41), "bill_address_city" varchar(31), "bill_address_state" varchar(21), "bill_address_postal_code" varchar(13), "bill_address_country" varchar(31), "bill_address_note" varchar(41), "bill_address_block_addr1" varchar(41), "bill_address_block_addr2" varchar(41), "bill_address_block_addr3" varchar(41), "bill_address_block_addr4" varchar(41), "bill_address_block_addr5" varchar(41), "ship_address_addr1" varchar(41), "ship_address_addr2" varchar(41), "ship_address_addr3" varchar(41), "ship_address_addr4" varchar(41), "ship_address_addr5" varchar(41), "ship_address_city" varchar(31), "ship_address_state" varchar(21), "ship_address_postal_code" varchar(13), "ship_address_country" varchar(31), "ship_address_note" varchar(41), "ship_address_block_addr1" varchar(41), "ship_address_block_addr2" varchar(41), "ship_address_block_addr3" varchar(41), "ship_address_block_addr4" varchar(41), "ship_address_block_addr5" varchar(41), "print_as" varchar(41), "phone" varchar(21), "mobile" varchar(21), "pager" varchar(21), "alt_phone" varchar(21), "fax" varchar(21), "email" varchar(1023), "contact" varchar(41), "alt_contact" varchar(41), "customer_type_ref_list_id" varchar(36), "customer_type_ref_full_name" varchar(159), "terms_ref_list_id" varchar(36), "terms_ref_full_name" varchar(31), "sales_rep_ref_list_id" varchar(36), "sales_rep_ref_full_name" varchar(5), "balance" decimal(9,2), "total_balance" decimal(9,2), "sales_tax_code_ref_list_id" varchar(36), "sales_tax_code_ref_full_name" varchar(3), "item_sales_tax_ref_list_id" varchar(36), "item_sales_tax_ref_full_name" varchar(31), "sales_tax_country" varchar(31), "resale_number" varchar(21), "account_number" varchar(99), "credit_limit" decimal(9,2), "preferred_payment_method_ref_list_id" varchar(36), "preferred_payment_method_ref_full_name" varchar(31), "credit_card_info_credit_card_number" varchar(25), "credit_card_info_expiration_month" integer, "credit_card_info_expiration_year" integer, "credit_card_info_name_on_card" varchar(41), "credit_card_info_credit_card_address" varchar(41), "credit_card_info_credit_card_postal_code" varchar(41), "job_status" varchar(255), "job_start_date" datetime, "job_projected_end_date" datetime, "job_end_date" datetime, "job_desc" varchar(99), "job_type_ref_list_id" varchar(36), "job_type_ref_full_name" varchar(159), "notes" varchar(4095), "is_statement_with_parent" boolean, "delivery_method" varchar(255), "price_level_ref_list_id" varchar(36), "price_level_ref_full_name" varchar(31), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20090110030615)
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "list_id" varchar(36), "time_created" datetime, "time_modified" datetime, "edit_sequence" varchar(16), "name" varchar(41), "full_name" varchar(209), "is_active" boolean, "parent_ref_list_id" varchar(36), "parent_ref_full_name" varchar(255), "sublevel" integer, "company_name" varchar(41), "salutation" varchar(15), "first_name" varchar(25), "middle_name" varchar(5), "last_name" varchar(25), "suffix" varchar(255), "bill_address_addr1" varchar(41), "bill_address_addr2" varchar(41), "bill_address_addr3" varchar(41), "bill_address_addr4" varchar(41), "bill_address_addr5" varchar(41), "bill_address_city" varchar(31), "bill_address_state" varchar(21), "bill_address_postal_code" varchar(13), "bill_address_country" varchar(31), "bill_address_note" varchar(41), "bill_address_block_addr1" varchar(41), "bill_address_block_addr2" varchar(41), "bill_address_block_addr3" varchar(41), "bill_address_block_addr4" varchar(41), "bill_address_block_addr5" varchar(41), "ship_address_addr1" varchar(41), "ship_address_addr2" varchar(41), "ship_address_addr3" varchar(41), "ship_address_addr4" varchar(41), "ship_address_addr5" varchar(41), "ship_address_city" varchar(31), "ship_address_state" varchar(21), "ship_address_postal_code" varchar(13), "ship_address_country" varchar(31), "ship_address_note" varchar(41), "ship_address_block_addr1" varchar(41), "ship_address_block_addr2" varchar(41), "ship_address_block_addr3" varchar(41), "ship_address_block_addr4" varchar(41), "ship_address_block_addr5" varchar(41), "print_as" varchar(41), "phone" varchar(21), "mobile" varchar(21), "pager" varchar(21), "alt_phone" varchar(21), "fax" varchar(21), "email" varchar(1023), "contact" varchar(41), "alt_contact" varchar(41), "customer_type_ref_list_id" varchar(36), "customer_type_ref_full_name" varchar(159), "terms_ref_list_id" varchar(36), "terms_ref_full_name" varchar(31), "sales_rep_ref_list_id" varchar(36), "sales_rep_ref_full_name" varchar(5), "balance" decimal(9,2), "total_balance" decimal(9,2), "sales_tax_code_ref_list_id" varchar(36), "sales_tax_code_ref_full_name" varchar(3), "item_sales_tax_ref_list_id" varchar(36), "item_sales_tax_ref_full_name" varchar(31), "sales_tax_country" varchar(31), "resale_number" varchar(21), "account_number" varchar(99), "credit_limit" decimal(9,2), "preferred_payment_method_ref_list_id" varchar(36), "preferred_payment_method_ref_full_name" varchar(31), "credit_card_info_credit_card_number" varchar(25), "credit_card_info_expiration_month" integer, "credit_card_info_expiration_year" integer, "credit_card_info_name_on_card" varchar(41), "credit_card_info_credit_card_address" varchar(41), "credit_card_info_credit_card_postal_code" varchar(41), "job_status" varchar(255), "job_start_date" datetime, "job_projected_end_date" datetime, "job_end_date" datetime, "job_desc" varchar(99), "job_type_ref_list_id" varchar(36), "job_type_ref_full_name" varchar(159), "notes" varchar(4095), "is_statement_with_parent" boolean, "delivery_method" varchar(255), "price_level_ref_list_id" varchar(36), "price_level_ref_full_name" varchar(31), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090110030615')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("customers")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCustomers (20090110030615)
+Migrating to CreateOrders (20090110031048)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descrption" text, "starts_on" date, "ends_on" date, "customer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090110031048')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("customers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "customers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "list_id" varchar(36), "time_created" datetime, "time_modified" datetime, "edit_sequence" varchar(16), "name" varchar(41), "full_name" varchar(209), "is_active" boolean, "parent_ref_list_id" varchar(36), "parent_ref_full_name" varchar(255), "sublevel" integer, "company_name" varchar(41), "salutation" varchar(15), "first_name" varchar(25), "middle_name" varchar(5), "last_name" varchar(25), "suffix" varchar(255), "bill_address_addr1" varchar(41), "bill_address_addr2" varchar(41), "bill_address_addr3" varchar(41), "bill_address_addr4" varchar(41), "bill_address_addr5" varchar(41), "bill_address_city" varchar(31), "bill_address_state" varchar(21), "bill_address_postal_code" varchar(13), "bill_address_country" varchar(31), "bill_address_note" varchar(41), "bill_address_block_addr1" varchar(41), "bill_address_block_addr2" varchar(41), "bill_address_block_addr3" varchar(41), "bill_address_block_addr4" varchar(41), "bill_address_block_addr5" varchar(41), "ship_address_addr1" varchar(41), "ship_address_addr2" varchar(41), "ship_address_addr3" varchar(41), "ship_address_addr4" varchar(41), "ship_address_addr5" varchar(41), "ship_address_city" varchar(31), "ship_address_state" varchar(21), "ship_address_postal_code" varchar(13), "ship_address_country" varchar(31), "ship_address_note" varchar(41), "ship_address_block_addr1" varchar(41), "ship_address_block_addr2" varchar(41), "ship_address_block_addr3" varchar(41), "ship_address_block_addr4" varchar(41), "ship_address_block_addr5" varchar(41), "print_as" varchar(41), "phone" varchar(21), "mobile" varchar(21), "pager" varchar(21), "alt_phone" varchar(21), "fax" varchar(21), "email" varchar(1023), "contact" varchar(41), "alt_contact" varchar(41), "customer_type_ref_list_id" varchar(36), "customer_type_ref_full_name" varchar(159), "terms_ref_list_id" varchar(36), "terms_ref_full_name" varchar(31), "sales_rep_ref_list_id" varchar(36), "sales_rep_ref_full_name" varchar(5), "balance" decimal(9,2), "total_balance" decimal(9,2), "sales_tax_code_ref_list_id" varchar(36), "sales_tax_code_ref_full_name" varchar(3), "item_sales_tax_ref_list_id" varchar(36), "item_sales_tax_ref_full_name" varchar(31), "sales_tax_country" varchar(31), "resale_number" varchar(21), "account_number" varchar(99), "credit_limit" decimal(9,2), "preferred_payment_method_ref_list_id" varchar(36), "preferred_payment_method_ref_full_name" varchar(31), "credit_card_info_credit_card_number" varchar(25), "credit_card_info_expiration_month" integer, "credit_card_info_expiration_year" integer, "credit_card_info_name_on_card" varchar(41), "credit_card_info_credit_card_address" varchar(41), "credit_card_info_credit_card_postal_code" varchar(41), "job_status" varchar(255), "job_start_date" datetime, "job_projected_end_date" datetime, "job_end_date" datetime, "job_desc" varchar(99), "job_type_ref_list_id" varchar(36), "job_type_ref_full_name" varchar(159), "notes" varchar(4095), "is_statement_with_parent" boolean, "delivery_method" varchar(255), "price_level_ref_list_id" varchar(36), "price_level_ref_full_name" varchar(31), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (20.1ms)[0m   [0;1mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descrption" text, "starts_on" date, "ends_on" date, "customer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090110031048')[0m
+  [4;35;1mSQL (14.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090110030615')[0m
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-01-09 19:16:54) [GET]
+  [4;36;1mCustomer Load (1.6ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 11ms (View: 4, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2009-01-09 19:16:57) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/customers/new]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2009-01-09 19:16:57) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 84ms (View: 13, DB: 0) | 200 OK [http://localhost/customers/new]
+
+
+Processing CustomersController#create (for 127.0.0.1 at 2009-01-09 19:16:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"c81e8af5e573d2c073ba13f12ecf1b093e0e1e7b", "customer"=>{"name"=>"fred"}}
+  [4;35;1mCustomer Create (0.7ms)[0m   [0mINSERT INTO "customers" ("ship_address_addr2", "terms_ref_list_id", "sales_tax_code_ref_list_id", "bill_address_block_addr5", "ship_address_block_addr5", "contact", "job_type_ref_list_id", "full_name", "ship_address_addr3", "credit_card_info_credit_card_address", "alt_phone", "credit_card_info_expiration_year", "terms_ref_full_name", "middle_name", "ship_address_addr4", "bill_address_city", "edit_sequence", "print_as", "credit_card_info_expiration_month", "preferred_payment_method_ref_full_name", "bill_address_addr1", "job_status", "ship_address_postal_code", "price_level_ref_list_id", "bill_address_addr2", "ship_address_addr5", "company_name", "bill_address_addr3", "email", "balance", "job_desc", "sublevel", "phone", "total_balance", "bill_address_note", "ship_address_city", "preferred_payment_method_ref_list_id", "credit_card_info_credit_card_postal_code", "bill_address_addr4", "ship_address_state", "updated_at", "bill_address_country", "pager", "bill_address_addr5", "job_start_date", "account_number", "bill_address_state", "parent_ref_list_id", "customer_type_ref_list_id", "time_created", "sales_rep_ref_full_name", "salutation", "bill_address_postal_code", "name", "ship_address_note", "resale_number", "list_id", "is_active", "time_modified", "notes", "job_end_date", "job_type_ref_full_name", "customer_type_ref_full_name", "last_name", "first_name", "credit_card_info_credit_card_number", "credit_card_info_name_on_card", "ship_address_country", "suffix", "ship_address_block_addr1", "bill_address_block_addr1", "sales_rep_ref_list_id", "item_sales_tax_ref_list_id", "fax", "sales_tax_code_ref_full_name", "item_sales_tax_ref_full_name", "sales_tax_country", "credit_limit", "ship_address_block_addr2", "bill_address_block_addr2", "alt_contact", "delivery_method", "created_at", "ship_address_block_addr3", "bill_address_block_addr3", "mobile", "is_statement_with_parent", "ship_address_block_addr4", "bill_address_block_addr4", "ship_address_addr1", "parent_ref_full_name", "job_projected_end_date", "price_level_ref_full_name") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-01-10 03:16:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'fred', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-01-10 03:16:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Redirected to #<Customer:0x2414a40>
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-01-09 19:16:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Load (40.5ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 66ms (View: 14, DB: 40) | 200 OK [http://localhost/customers/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-01-09 19:17:01) [GET]
+  [4;35;1mCustomer Load (1.6ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 24ms (View: 19, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#new (for 127.0.0.1 at 2009-01-09 19:17:02) [GET]
+Rendering template within layouts/customers
+Rendering customers/new
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/customers/new]
+
+
+Processing CustomersController#create (for 127.0.0.1 at 2009-01-09 19:17:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"c81e8af5e573d2c073ba13f12ecf1b093e0e1e7b", "customer"=>{"name"=>"bob"}}
+  [4;36;1mCustomer Create (0.6ms)[0m   [0;1mINSERT INTO "customers" ("ship_address_addr2", "terms_ref_list_id", "sales_tax_code_ref_list_id", "bill_address_block_addr5", "ship_address_block_addr5", "contact", "job_type_ref_list_id", "full_name", "ship_address_addr3", "credit_card_info_credit_card_address", "alt_phone", "credit_card_info_expiration_year", "terms_ref_full_name", "middle_name", "ship_address_addr4", "bill_address_city", "edit_sequence", "print_as", "credit_card_info_expiration_month", "preferred_payment_method_ref_full_name", "bill_address_addr1", "job_status", "ship_address_postal_code", "price_level_ref_list_id", "bill_address_addr2", "ship_address_addr5", "company_name", "bill_address_addr3", "email", "balance", "job_desc", "sublevel", "phone", "total_balance", "bill_address_note", "ship_address_city", "preferred_payment_method_ref_list_id", "credit_card_info_credit_card_postal_code", "bill_address_addr4", "ship_address_state", "updated_at", "bill_address_country", "pager", "bill_address_addr5", "job_start_date", "account_number", "bill_address_state", "parent_ref_list_id", "customer_type_ref_list_id", "time_created", "sales_rep_ref_full_name", "salutation", "bill_address_postal_code", "name", "ship_address_note", "resale_number", "list_id", "is_active", "time_modified", "notes", "job_end_date", "job_type_ref_full_name", "customer_type_ref_full_name", "last_name", "first_name", "credit_card_info_credit_card_number", "credit_card_info_name_on_card", "ship_address_country", "suffix", "ship_address_block_addr1", "bill_address_block_addr1", "sales_rep_ref_list_id", "item_sales_tax_ref_list_id", "fax", "sales_tax_code_ref_full_name", "item_sales_tax_ref_full_name", "sales_tax_country", "credit_limit", "ship_address_block_addr2", "bill_address_block_addr2", "alt_contact", "delivery_method", "created_at", "ship_address_block_addr3", "bill_address_block_addr3", "mobile", "is_statement_with_parent", "ship_address_block_addr4", "bill_address_block_addr4", "ship_address_addr1", "parent_ref_full_name", "job_projected_end_date", "price_level_ref_full_name") VALUES(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-01-10 03:17:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bob', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2009-01-10 03:17:05', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+Redirected to #<Customer:0x18d835c>
+Completed in 25ms (DB: 1) | 302 Found [http://localhost/customers]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-01-09 19:17:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mCustomer Load (1.1ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 2) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 94ms (View: 81, DB: 1) | 200 OK [http://localhost/customers/2]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-01-09 19:17:07) [GET]
+  [4;36;1mCustomer Load (2.0ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:17:22) [GET]
+  [4;35;1mOrder Load (0.5ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 10ms (View: 4, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#new (for 127.0.0.1 at 2009-01-09 19:17:23) [GET]
+Rendering template within layouts/orders
+Rendering orders/new
+Completed in 92ms (View: 88, DB: 0) | 200 OK [http://localhost/orders/new]
+
+
+Processing OrdersController#create (for 127.0.0.1 at 2009-01-09 19:17:32) [POST]
+  Parameters: {"commit"=>"Create", "order"=>{"starts_on(1i)"=>"2009", "starts_on(2i)"=>"1", "starts_on(3i)"=>"10", "ends_on(1i)"=>"2009", "ends_on(2i)"=>"1", "customer_id"=>"1", "ends_on(3i)"=>"10", "descrption"=>"asfasdf"}, "authenticity_token"=>"c81e8af5e573d2c073ba13f12ecf1b093e0e1e7b"}
+  [4;36;1mOrder Create (0.3ms)[0m   [0;1mINSERT INTO "orders" ("updated_at", "starts_on", "customer_id", "descrption", "ends_on", "created_at") VALUES('2009-01-10 03:17:32', '2009-01-10', 1, 'asfasdf', '2009-01-10', '2009-01-10 03:17:32')[0m
+Redirected to #<Order:0x20da604>
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/orders]
+
+
+Processing OrdersController#show (for 127.0.0.1 at 2009-01-09 19:17:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOrder Load (0.2ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+Rendering template within layouts/orders
+Rendering orders/show
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/orders/1]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:17:34) [GET]
+  [4;36;1mOrder Load (0.6ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+Completed in 10ms (View: 5, DB: 1) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:20:03) [GET]
+  [4;36;1mOrder Load (1.0ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+  [4;35;1mCustomer Load (1.2ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 31ms (View: 25, DB: 2) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:21:26) [GET]
+  [4;36;1mOrder Load (0.7ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+  [4;35;1mCustomer Load (63.9ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 98ms (View: 30, DB: 65) | 200 OK [http://localhost/orders]
+
+
+Processing CustomersController#show (for 127.0.0.1 at 2009-01-09 19:21:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mCustomer Load (1.2ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Rendering template within layouts/customers
+Rendering customers/show
+Completed in 25ms (View: 12, DB: 1) | 200 OK [http://localhost/customers/1]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-01-09 19:21:33) [GET]
+  [4;35;1mCustomer Load (2.0ms)[0m   [0mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 27ms (View: 20, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing CustomersController#index (for 127.0.0.1 at 2009-01-09 19:22:13) [GET]
+  [4;36;1mCustomer Load (1.9ms)[0m   [0;1mSELECT * FROM "customers" [0m
+Rendering template within layouts/customers
+Rendering customers/index
+Completed in 26ms (View: 20, DB: 2) | 200 OK [http://localhost/customers]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:22:21) [GET]
+  [4;35;1mOrder Load (0.6ms)[0m   [0mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+  [4;36;1mCustomer Load (1.2ms)[0m   [0;1mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 32ms (View: 26, DB: 2) | 200 OK [http://localhost/orders]
+
+
+Processing OrdersController#edit (for 127.0.0.1 at 2009-01-09 19:22:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOrder Load (0.3ms)[0m   [0mSELECT * FROM "orders" WHERE ("orders"."id" = 1) [0m
+Rendering template within layouts/orders
+Rendering orders/edit
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/orders/1/edit]
+
+
+Processing OrdersController#index (for 127.0.0.1 at 2009-01-09 19:23:28) [GET]
+  [4;36;1mOrder Load (0.9ms)[0m   [0;1mSELECT * FROM "orders" [0m
+Rendering template within layouts/orders
+Rendering orders/index
+  [4;35;1mCustomer Load (1.2ms)[0m   [0mSELECT * FROM "customers" WHERE ("customers"."id" = 1) [0m
+Completed in 33ms (View: 27, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mCustomer Load (1.8ms)[0m   [0;1mSELECT * FROM "customers" LIMIT 1[0m
+  [4;36;1mCustomer Load (2.3ms)[0m   [0;1mSELECT * FROM "customers" LIMIT 1[0m
+  [4;36;1mCustomer Load (1.9ms)[0m   [0;1mSELECT * FROM "customers" LIMIT 1[0m
